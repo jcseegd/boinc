@@ -1,9 +1,10 @@
 FROM ubuntu:16.04
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive \
+    VERSION=7.6.31+dfsg-6ubuntu1
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-      boinc \
+      boinc=$VERSION \
       boinctui \
       ca-certificates \
       net-tools \
