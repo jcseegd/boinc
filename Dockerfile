@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     VERSION=7.6.31+dfsg-6ubuntu1
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends \
+ && apt-get install --assume-yes --no-install-recommends \
       boinc=$VERSION \
       boinctui \
       ca-certificates \
