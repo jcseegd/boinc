@@ -11,4 +11,5 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint /entrypoint
+RUN chmod +x /entrypoint
 ENTRYPOINT ["/entrypoint"]
