@@ -1,5 +1,6 @@
 #!/bin/bash
 MAXCPUS=${MAXCPUS:=1}
+MAXNCPUSPCT=${MAXNCPUSPCT:=25.000000}
 F="cc_config.xml gui_rpc_auth.cfg remote_hosts.cfg"
 for file in $F; do
   if [ ! -f /var/lib/boinc-client/$file ]; then
@@ -12,7 +13,7 @@ fi
 cat > /var/lib/boinc-client/global_prefs_override.xml <<EOF
 <global_preferences>
 <max_cpus>${MAXCPUS}</max_cpus>
-<max_ncpus_pct>25.000000</max_ncpus_pct>
+<max_ncpus_pct>${MAXNCPUSPCT}</max_ncpus_pct>
 <suspend_cpu_usage>0</suspend_cpu_usage>
 <run_if_user_active>1</run_if_user_active>
 <cpu_usage_limit>100</cpu_usage_limit>
