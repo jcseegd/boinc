@@ -21,6 +21,22 @@ cat > /var/lib/boinc-client/global_prefs_override.xml <<EOF
 </global_preferences>
 EOF
 mkdir -p /dev/input/mice
+cat > ~/.boinctui.cfg <<EOF
+<boinctui_cfg>
+    <column_view_mask>-1
+    </column_view_mask>
+    <tasks_list_mode>0
+    </tasks_list_mode>
+    <tasks_sort_mode>5
+    </tasks_sort_mode>
+    <server>
+        <host>127.0.0.1
+        </host>
+        <port>31416
+        </port>
+    </server>
+</boinctui_cfg>
+EOF
 
 if [ -n "$1" ]; then
   exec "$@"
