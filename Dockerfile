@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive \
-    VERSION=7.6.31+dfsg-6ubuntu1
+    VERSION=7.9.3+dfsg-5ubuntu2
 
 RUN apt-get update \
  && apt-get install --assume-yes --no-install-recommends \
